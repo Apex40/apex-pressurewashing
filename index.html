@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Pressure Washing</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f4f6f8;
+}
+
+/* HEADER */
+
+header{
+background:#050b14;
+color:white;
+padding:22px 0;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 12px rgba(0,0,0,.2);
+transition:transform .35s ease, opacity .35s ease;
+}
+
+header.hide-header{
+transform:translateY(-100%);
+opacity:0;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:16px;
+}
+
+.brand img{
+width:80px;
+height:80px;
+object-fit:contain;
+background:white;
+border-radius:18px;
+padding:6px;
+}
+
+.brand-text h1{
+margin:0;
+font-size:1.2rem;
+}
+
+.brand-text p{
+margin:4px 0 0 0;
+font-size:.9rem;
+color:#c9d1d9;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+height:40vh;
+display:flex;
+align-items:center;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("hero.jpg") center/cover no-repeat;
+}
+
+.hero h1{
+font-size:38px;
+margin:0;
+}
+
+.hero p{
+font-size:18px;
+margin-top:10px;
+}
+
+/* SECTIONS */
+
+section{
+padding:70px 0;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card div{
+padding:15px;
+}
+
+/* PRICING */
+
+.pricing{
+background:#f4f6f8;
+text-align:center;
+}
+
+.pricing h2{
+font-size:38px;
+margin-bottom:25px;
+}
+
+.pricing h3{
+margin-top:20px;
+margin-bottom:12px;
+font-size:22px;
+}
+
+.pricing button{
+padding:12px 18px;
+margin:6px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+background:#e5ebf2;
+color:#111;
+}
+
+.pricing button.active{
+background:#1f6feb;
+color:white;
+}
+
+/* ESTIMATION BOX */
+
+.estimate-box{
+background:#041321;
+color:white;
+padding:22px;
+border-radius:18px;
+margin-top:25px;
+text-align:left;
+box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+.estimate-row{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:14px;
+font-size:20px;
+gap:20px;
+}
+
+.estimate-line{
+border:none;
+border-top:1px solid rgba(255,255,255,.12);
+margin:10px 0 18px 0;
+}
+
+.estimate-price-row strong{
+font-size:40px;
+}
+
+.estimate-note{
+margin-top:15px;
+font-size:16px;
+color:rgba(255,255,255,.85);
+}
+
+.estimate-footer{
+margin-top:25px;
+color:#4b5f74;
+text-align:center;
+font-size:20px;
+}
+
+/* CONTACT */
+
+.contact{
+background:linear-gradient(135deg,#1e4fa3,#1b3d73);
+padding:100px 20px;
+text-align:center;
+color:white;
+}
+
+.contact-box{
+background:rgba(255,255,255,0.1);
+padding:60px;
+border-radius:20px;
+max-width:800px;
+margin:auto;
+}
+
+.contact-box h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.contact-buttons{
+margin-top:30px;
+}
+
+.call-btn{
+background:white;
+color:black;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+margin-right:20px;
+display:inline-block;
+}
+
+.email-btn{
+background:#2c6ed5;
+color:white;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+}
+
+footer{
+background:#0d1117;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+.services{
+grid-template-columns:repeat(2,1fr);
+}
+}
+
+@media(max-width:700px){
+.estimate-row{
+flex-direction:column;
+align-items:flex-start;
+font-size:18px;
+}
+
+.estimate-price-row strong{
+font-size:34px;
+}
+
+.estimate-footer{
+font-size:16px;
+}
+}
+
+@media(max-width:600px){
+.services{
+grid-template-columns:1fr;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="container nav">
+
+<div class="brand">
+<img src="logo.png">
+<div class="brand-text">
+<h1>Apex Pressure Washing</h1>
+<p>Nettoyage extérieur professionnel</p>
+</div>
+</div>
+
+<nav class="nav-links">
+<a href="#services">Services</a>
+<a href="#pricing">Estimation</a>
+<a href="#soumission">Soumission</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Apex Pressure Washing</h1>
+<p>Nettoyage extérieur professionnel</p>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+
+<h2>Services</h2>
+
+<div class="services">
+
+<div class="card">
+<img src="driveway.jpg">
+<div>
+<h3>Driveway</h3>
+<p>Nettoyage complet des stationnements.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="deck.jpg">
+<div>
+<h3>Deck</h3>
+<p>Nettoyage des terrasses en bois.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="gutter.jpg">
+<div>
+<h3>Gouttières</h3>
+<p>Nettoyage professionnel des gouttières.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="patio.jpg">
+<div>
+<h3>Patio</h3>
+<p>Nettoyage de patios et surfaces extérieures.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="pricing" class="pricing">
+<div class="container">
+
+<h2>Estimation rapide</h2>
+
+<h3>Type de propriété</h3>
+
+<button class="active house-btn" onclick="setHouse('Bungalow',1,this)">Bungalow</button>
+<button class="house-btn" onclick="setHouse('Semi-détaché',1.2,this)">Semi-détaché</button>
+<button class="house-btn" onclick="setHouse('Maison 2 étages',1.4,this)">Maison 2 étages</button>
+<button class="house-btn" onclick="setHouse('Grande maison',1.6,this)">Grande maison</button>
+
+<h3>Service</h3>
+
+<button class="active service-btn" onclick="setService('Driveway',150,this)">Driveway</button>
+<button class="service-btn" onclick="setService('Deck',300,this)">Deck</button>
+<button class="service-btn" onclick="setService('Gouttières',200,this)">Gouttières</button>
+<button class="service-btn" onclick="setService('Patio',150,this)">Patio</button>
+
+<div class="estimate-box">
+
+<div class="estimate-row">
+<span>Propriété :</span>
+<strong id="propertyType">Bungalow</strong>
+</div>
+
+<div class="estimate-row">
+<span>Service :</span>
+<strong id="serviceType">Driveway</strong>
+</div>
+
+<hr class="estimate-line">
+
+<div class="estimate-row estimate-price-row">
+<span>Prix estimé :</span>
+<strong id="price">150$</strong>
+</div>
+
+<p class="estimate-note">
+Prix de base pour un bungalow. Le prix augmente selon la grosseur du travail.
+</p>
+
+</div>
+
+<p class="estimate-footer">
+Prix de départ. Le prix final peut varier selon l’état, l’accessibilité et la superficie.
+</p>
+
+</div>
+</section>
+
+<section id="soumission" style="padding:70px 20px;text-align:center;background:#f4f6f8;">
+<div class="container">
+
+<h2>Obtenir une soumission</h2>
+
+<p style="max-width:700px;margin:20px auto;">
+Remplissez notre formulaire de soumission et nous vous contacterons rapidement.
+</p>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSf3wwlVadJMrqbyi9V_leRj4YeQ4bLerST5TPBRuw1ubYYoew/viewform"
+target="_blank"
+style="padding:15px 30px;background:#1f6feb;color:white;border-radius:30px;text-decoration:none;font-weight:bold;display:inline-block;">
+Ouvrir le formulaire
+</a>
+
+</div>
+</section>
+
+<section id="contact" class="contact">
+
+<div class="contact-box">
+
+<h2>Contactez Apex Pressure Washing</h2>
+
+<p>Pour une soumission rapide, contactez-nous dès aujourd’hui.</p>
+
+<p><strong>Téléphone :</strong> 438-865-7384</p>
+<p><strong>Courriel :</strong> apexpressurewashing40@gmail.com</p>
+<p><strong>Région desservie :</strong> Québec</p>
+
+<div class="contact-buttons">
+<a href="tel:4388657384" class="call-btn">Appeler</a>
+<a href="mailto:apexpressurewashing40@gmail.com" class="email-btn">Envoyer un courriel</a>
+</div>
+
+</div>
+</section>
+
+<footer>
+Apex Pressure Washing © 2026
+</footer>
+
+<script>
+
+/* estimation */
+
+let houseMultiplier = 1;
+let basePrice = 150;
+let propertyName = "Bungalow";
+let serviceName = "Driveway";
+
+function update(){
+
+const price = Math.round(basePrice * houseMultiplier);
+
+document.getElementById("price").innerText = price + "$";
+document.getElementById("propertyType").innerText = propertyName;
+document.getElementById("serviceType").innerText = serviceName;
+
+}
+
+function setHouse(name,value,el){
+
+houseMultiplier=value;
+propertyName=name;
+
+document.querySelectorAll(".house-btn").forEach(btn=>btn.classList.remove("active"));
+el.classList.add("active");
+
+update();
+
+}
+
+function setService(name,value,el){
+
+basePrice=value;
+serviceName=name;
+
+document.querySelectorAll(".service-btn").forEach(btn=>btn.classList.remove("active"));
+el.classList.add("active");
+
+update();
+
+}
+
+update();
+
+/* HEADER SCROLL */
+
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
+const scrollThreshold = 120;
+
+window.addEventListener("scroll", function(){
+
+const currentScrollY = window.scrollY;
+
+if(currentScrollY <= scrollThreshold){
+header.classList.remove("hide-header");
+}
+else if(currentScrollY > lastScrollY){
+header.classList.add("hide-header");
+}
+else{
+header.classList.remove("hide-header");
+}
+
+lastScrollY = currentScrollY;
+
+});
+
+</script>
+
+</body>
+</html>
